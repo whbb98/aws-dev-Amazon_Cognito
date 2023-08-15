@@ -1,0 +1,7 @@
+{
+    "FifoQueue": "true",
+    "VisibilityTimeout": "20",
+    "ReceiveMessageWaitTimeSeconds": "0",
+    "ContentBasedDeduplication": "false",
+    "DeduplicationScope": "queue"
+  }

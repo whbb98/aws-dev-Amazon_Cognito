@@ -1,0 +1,5 @@
+{
+    "TopicArn": "<FMI_1>",
+    "AttributeName": "Policy",
+    "AttributeValue": "{\"Version\": \"2008-10-17\",\"Id\": \"BeansTopicPolicy\",\"Statement\": [{\"Sid\": \"BeansAllowActions\",\"Effect\": \"Allow\",\"Principal\": {\"AWS\": \"arn:aws:iam::<FMI_2>:root\"},\"Action\": [\"SNS:Publish\",\"SNS:RemovePermission\",\"SNS:SetTopicAttributes\",\"SNS:DeleteTopic\",\"SNS:ListSubscriptionsByTopic\",\"SNS:GetTopicAttributes\",\"SNS:Receive\",\"SNS:AddPermission\",\"SNS:Subscribe\"],\"Resource\": \"arn:aws:sns:us-east-1:<FMI_2>:updated_beans_sns.fifo\",\"Condition\": {\"StringEquals\": {\"AWS:SourceOwner\": \"<FMI_2>\"}}},{\"Sid\": \"BeansAllowPublish\",\"Effect\": \"Allow\",\"Principal\": {\"AWS\": \"arn:aws:iam::<FMI_2>:root\"},\"Action\": \"SNS:Publish\",\"Resource\": \"arn:aws:sns:us-east-1:<FMI_2>:updated_beans_sns.fifo\"}]}"
+}

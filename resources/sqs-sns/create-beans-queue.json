@@ -1,0 +1,8 @@
+{
+  "FifoQueue": "true",
+  "VisibilityTimeout": "30",
+  "ReceiveMessageWaitTimeSeconds": "20",
+  "ContentBasedDeduplication": "true",
+  "DeduplicationScope": "queue",
+  "RedrivePolicy": "{\"deadLetterTargetArn\":\"arn:aws:sqs:us-east-1:<FMI_1>:DeadLetterQueue.fifo\",\"maxReceiveCount\":\"5\"}"
+}

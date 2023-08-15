@@ -1,0 +1,31 @@
+{
+    "Name": "website-api-gw-office-only-during-dev",
+    "Scope": "REGIONAL",
+    "DefaultAction": {
+        "Block": {}
+        },
+    "Rules": [
+        {
+            "Name": "ip_for_apigw",
+            "Priority": 0,
+            "Statement": {
+                "IPSetReferenceStatement": {
+                    "ARN": "arn:aws:wafv2:us-east-1:754867036746:regional/ipset/office_regional/b2edd032-7250-46f1-8f8b-1b8f50a35c87"
+                    }
+                },
+            "Action": {
+                "Allow": {}
+            },
+            "VisibilityConfig": {
+                "SampledRequestsEnabled": true,
+                "CloudWatchMetricsEnabled": true,
+                "MetricName": "ip_for_apigw"
+            }
+        }
+    ],
+    "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "website-api-gw-office-only-during-dev"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "Name": "cafe-website-office-only-during-dev",
+    "Scope": "CLOUDFRONT",
+    "DefaultAction": {
+        "Block": {}
+        },
+    "Rules": [
+        {
+            "Name": "only_office_please",
+            "Priority": 0,
+            "Statement": {
+                "IPSetReferenceStatement": {
+                    "ARN": "arn:aws:wafv2:us-east-1:754867036746:global/ipset/office/d35218e0-4453-42e1-8dfe-115014326128"
+                    }
+                },
+            "Action": {
+                "Allow": {}
+            },
+            "VisibilityConfig": {
+                "SampledRequestsEnabled": true,
+                "CloudWatchMetricsEnabled": true,
+                "MetricName": "only_office_please"
+            }
+        }
+    ],
+    "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "cafe-website-office-only-during-dev"
+    }
+}
